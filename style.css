@@ -1,0 +1,56 @@
+h1
+{
+	color: #3c84f8;
+	background-color: rgb(224, 224, 224, 0.5);
+	border: 1px solid rgb(224, 224, 224, 1);
+	margin-top: 85px;
+}
+.llist{
+	padding: 0px 187px;
+	text-align: left;
+}
+.list ul li{
+	list-style: none;
+	background-color: #3c84f8;
+	color: white;
+	display: inline-block;
+	padding: 15px 60px 15px 20px;
+	width: 228px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+}
+.list ul li span{
+	fill: white;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: 15px;
+	top: 12px;
+	background-color: #ffffff20;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.expand-container
+{
+	width: 150px;
+	height: 0px;
+	position: absolute;
+}
+.expand-container ul{
+	position: relative;
+	left: -40px;
+	top: -10px;
+	width: 100%;
+}
+.expand-container ul li{
+	text-align: left;
+	list-style: none;
+	border:1px solid rgb(207, 207, 207);
+	border-bottom: 0px;
+	background-color: rgb(242, 242, 242);
+	padding: 10px 0px;
+	padding-left: 16px;
+	cursor: pointer;
+}

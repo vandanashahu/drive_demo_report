@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Html form to uplaod files to google drive</title>
+</head>
+<body>
+	<form>
+		<input type="file" multiple name="files" required>
+		<input type="text" name="name" placeholder="enter name">
+		<input type="email" name="email address" placeholder="enter email">
+		<input type="text" name="country" placeholder="enter country">
+		<button type="submit">submit</button>
+	</form>
+
+
+	<h1>
+		all backup files
+	</h1>
+	<div class="list">
+		<ul>
+			<div style="text-align: center;">signin</div>
+			<!-- <li data-id="" data-name="">
+			<span>files name here...!!!</span>
+
+				<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M480 711 240 471l43-43 197 198 197-197 43 43-240 239Z"></path><path xmlns="http://www.w3.org/2000/svg" d="M480 711 240 471l43-43 197 198 197-197 43 43-240 239Z"></path>
+				</svg>
+			</li> -->
+		</ul>
+	</div>
+	<div class="expand-container" style="display: none;">
+		<ul>
+			<li onclick="readEditDownload(this, 'read')">read</li>
+			<li onclick="readEditDownload(this, 'edit')">edit</li>
+			<li onclick="readEditDownload(this, 'delete')">delete</li>
+		</ul>
+		
+	</div>
+</body>
+<script type="text/javascript">
+	let formElem = document.querySelector('form')
+	formElem.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		await fetch('/upload',{
+			method: 'POST',
+			body: new FormData(formElem)
+		});
+	});
+</script>
+</html>
